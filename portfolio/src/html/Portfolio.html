@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon Portfolio - Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/Portfolio.css">
+</head>
+<body>
+<header>
+    <h1>Mon Portfolio</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">A propos</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project active" data-index="1">
+            <img src="project1.jpg" alt="Projet 1">
+            <h3>Vote It</h3>
+            <p>Description du projet </p>
+            <p>Vote It est un site de débat où les utilisateurs peuvent créer des sujets de discussion, partager leur opinion et voter pour les opinions des autres. J'ai travaillé sur ce projet en tant que développeur web et Scrum Master. Mes responsabilités comprenaient la création de la base de données, la mise en place des fonctionnalités de vote et de commentaire, ainsi que la gestion des utilisateurs.</p>
+            <button class="carousel-button" onclick="openCarousel()"><img src="../../ressources/oeil.png"></button>
+            <div class="carousel-overlay" id="carousel-overlay">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <div class="carousel-slide">
+                            <img src="../../ressources/imgVoteIt/screen1.png" alt="screen 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../../ressources/imgVoteIt/screen2.png" alt="screen 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../../ressources/imgVoteIt/screen3.png" alt="screen 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../../ressources/imgVoteIt/screen4.png" alt="screen 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../../ressources/imgVoteIt/screen5.png" alt="screen 5">
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-control left">&lt;</button>
+                        <button class="carousel-control right">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project" data-index="2">
+            <img src="project2.jpg" alt="Projet 2">
+            <h3>Aventuriers du Rails</h3>
+            <p>Aventurier du Rails était un projet réalisé en Java qui consistait en une adaptation du jeu de plateau "Les Aventuriers du Rail". J'ai travaillé sur ce projet en tant que développeur et j'ai participé à la création des classes principales, à la mise en place du système de cartes et de déplacements des joueurs, ainsi qu'à la gestion des points de victoire. Le jeu était jouable seulement en réseau local </p>
+        </div>
+        <div class="project" data-index="3">
+            <img src="project3.jpg" alt="Projet 3">
+            <h3>Cas'Trip</h3>
+            <p> Cas'Trip est un site web dédié à la ville de Castries, dans le département de l'Hérault. Le site propose des articles sur les attractions touristiques, les événements locaux, les restaurants, les hébergements, les activités de plein air et plus encore. Cas'Trip est la ressource idéale pour les visiteurs qui cherchent à découvrir les merveilles de Castries et ses environs. Que vous cherchiez des activités en famille, des sites historiques ou simplement un endroit pour manger, Cas'Trip a tout ce dont vous avez besoin pour profiter de votre séjour à Castries.</p>
+        </div>
+        <div class="project" data-index="4">
+            <img src="project4.jpg" alt="Projet 4">
+            <h3>Waps</h3>
+            <p> Waps est une application mobile de navigation GPS qui vous aide à trouver le meilleur itinéraire pour vous rendre à votre destination. Que vous soyez en voiture, à vélo, en transports en commun ou à pied, Waps vous propose des itinéraires personnalisés pour vous aider à arriver rapidement et en toute sécurité à votre destination. La fonctionnalité de planification d'itinéraire de Waps prend en compte les conditions de circulation en temps réel et propose des itinéraires alternatifs si nécessaire.</p>
+        </div>
+
+    </section>
+    <div class="posButton">
+
+
+    <button id="prev-project">Projet précédent</button>
+    <button id="next-project">Projet suivant</button>
+    </div>
+</main>
+<footer>
+    <p id="footer-text"></p>
+</footer>
+<script src="../js/date.js"></script>
+
+</body>
+<script src="../js/Portfolio.js"></script>
+
+</html>

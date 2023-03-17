@@ -24,4 +24,4 @@ Ce projet est mon portfolio personnel qui présente mes compétences, mes projet
 
 Mon nom est Ewan Treguier et je suis un développeur web passionné par la création de sites web exceptionnels et de belles interfaces utilisateur. Vous pouvez me contacter via mon email ewantt18@gmail.com pour des projets ou des opportunités de travail.
 
-Pour voir une demo de mon site, [clique ici](https://ewan-treguier.github.io/portfolio/).
+Pour voir une demo de mon site, [clique ici](https://ewan-treguier.github.io/Portfolio/).

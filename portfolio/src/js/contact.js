@@ -18,3 +18,5 @@ function displayMessage(message) {
 function clearMessage() {
     document.getElementById("message").innerHTML = "";
 }
+
+

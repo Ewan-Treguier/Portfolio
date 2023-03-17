@@ -1,0 +1,29 @@
+.navbar-custom {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .navbar-custom .navbar-nav .dropdown-menu {
+        background-color: #333;
+    }
+
+    .navbar-custom .navbar-nav .dropdown-menu .dropdown-item {
+        color: #fff;
+    }
+
+    .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}

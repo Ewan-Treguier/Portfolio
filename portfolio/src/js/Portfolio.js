@@ -39,62 +39,37 @@ nextBtn.addEventListener('click', showNextProject);
 // Show the first project
 showCurrentProject();
 
-// Open the carousel overlay and the first slide
-function openCarousel() {
-    document.getElementById('carousel-overlay').style.display = 'block';
-    document.getElementsByClassName('carousel-slide')[0].style.display = 'block';
+// Open project overlay
+const openProject = () => {
+    window.location.assign('projet/Voteit.html');
+}
+const openProject2 = () => {
+    window.location.assign('projet/Rails.html');
 }
 
-// Close the carousel overlay and hide all slides
-function closeCarousel() {
-    document.getElementById('carousel-overlay').style.display = 'none';
-    const slides = document.getElementsByClassName('carousel-slide');
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
-    }
+const openProject3 = () => {
+    window.location.assign('projet/Castrip.html');
 }
 
-// Get DOM elements
-const carousel = document.querySelector('.carousel');
-const carouselImages = document.querySelector('.carousel-images');
-const carouselControls = document.querySelector('.carousel-controls');
-const carouselControlLeft = document.querySelector('.carousel-control.left');
-const carouselControlRight = document.querySelector('.carousel-control.right');
-const carouselOverlay = document.getElementById('carousel-overlay');
+const projectButtons = document.querySelectorAll('.open-project-button');
+const projectOverlay = document.querySelector('.project-overlay');
+const closeProjectButton = document.querySelector('.close-project-button');
 
-// Initialize current image position variable
-let currentPosition = 0;
-
-// Scroll the carousel to the left
-function scrollLeft() {
-    if (currentPosition > 0) {
-        currentPosition--;
-        carouselImages.style.transform = `translateX(-${currentPosition * 100}%)`;
-    }
+// Display the selected project overlay
+function openProjectOverlay() {
+    projectOverlay.classList.add('active');
 }
 
-// Scroll the carousel to the right
-function scrollRight() {
-    if (currentPosition < carouselImages.children.length - 1) {
-        currentPosition++;
-        carouselImages.style.transform = `translateX(-${currentPosition * 100}%)`;
-    } else {
-        // If the current image is the last one, go back to the first image
-        currentPosition = 0;
-        carouselImages.style.transform = `translateX(0)`;
-    }
+// Hide the selected project overlay
+function closeProjectOverlay() {
+    projectOverlay.classList.remove('active');
 }
 
-// Add event listeners to control buttons
-carouselControlLeft.addEventListener('click', scrollLeft);
-carouselControlRight.addEventListener('click', scrollRight);
-
-// Add event listener for keyboard arrow keys
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowLeft') {
-        scrollLeft();
-    } else if (event.key === 'ArrowRight') {
-        scrollRight();
-    }
+// Add event listeners to project buttons
+projectButtons.forEach((button) => {
+    button.addEventListener('click', openProjectOverlay);
 });
 
+
+// Add event listener to close button
+closeProjectButton.addEventListener('click', closeProjectOverlay);

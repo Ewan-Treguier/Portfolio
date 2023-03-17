@@ -7,6 +7,7 @@
 body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #f7f7f7;
+
 }
 
 header {
@@ -55,6 +56,7 @@ main {
 }
 
 section {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -215,62 +217,3 @@ footer a {
 footer a:hover {
     color: #ccc;
 }
-
-@media screen and (min-width: 768px) {
-    section {
-        max-width: 90%;
-        max-height: none;
-    }
-
-    section#portfolio {
-        max-width: 90%;
-        max-height: none;
-        margin: 50px auto 0;
-        padding: 100px 50px;
-    }
-
-    section#portfolio h2 {
-        margin-bottom: 50px;
-    }
-
-    .project p {
-        margin-bottom: 30px;
-    }
-}
-
-    @media only screen and (max-width: 500px) {
-        section#portfolio {
-            padding: 20px;
-        }
-
-        section#portfolio h2 {
-            font-size: 22px;
-        }
-
-        .project img {
-            max-height: 150px;
-        }
-
-        .project h3 {
-            font-size: 18px;
-        }
-
-        .project p {
-            font-size: 14px;
-        }
-    }
-    @media only screen and (max-width: 400px) {
-        header h1 {
-            font-size: 18px;
-        }
-
-        .button-wrapper {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .posButton {
-            padding-left: 0px;
-            margin-top: 20px;
-        }
-    }

@@ -79,7 +79,8 @@ function navigateToHome() {
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    snowflakes.length = 0;
+    init();
 }
 
 window.addEventListener('resize', resizeCanvas);
-

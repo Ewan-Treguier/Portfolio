@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 #rocket {
@@ -10,7 +11,7 @@ body {
     animation-name: rocket-animation;
     animation-duration: 2s;
     animation-iteration-count: 1; /* la fusée ne bouge qu'une seule fois */
-    height: 100px;
+    height: 150px; /* agrandir la fusée */
 }
 
 @keyframes rocket-animation {
@@ -22,7 +23,7 @@ body {
     }
 }
 
-p{
+p {
     position: absolute;
     bottom: 20%; /* ajuster la position verticale du texte */
     left: 50%;
@@ -30,14 +31,6 @@ p{
     color: #f7f7f7;
     font-family: "Helvetica Neue", sans-serif;
     text-align: center; /* centrer le texte */
-}
-
-@media screen and (max-width: 768px) { /* ajouter une règle pour les petits écrans */
-    #rocket {
-        height: 50px;
-    }
-    p {
-        bottom: 10%;
-        font-size: 14px;
-    }
+    font-size: 30px; /* agrandir le texte */
+    padding: 0 20px; /* ajouter un peu d'espacement horizontal pour le texte */
 }

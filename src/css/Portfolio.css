@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f7f7f7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header li {
+    margin-left: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+header a:hover {
+    color: #666;
+}
+
+/* Main */
+main {
+    margin-top: 80px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+
+}
+
+section:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    border: 2px solid #333;
+}
+
+section#portfolio {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+    max-height: 80%;
+    margin: 50px auto;
+    position: relative;
+}
+
+section#portfolio h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 300px;
+}
+
+.project {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.project.show {
+    display: flex;
+}
+
+.project img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+    text-align: center;
+}
+
+.button-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.posButton {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.posButton button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.posButton button:hover {
+    background-color: #666;
+}
+.arrow-left {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #fff;
+    margin-right: 10px;
+}
+
+.arrow-right {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+    margin-left: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.project img[alt="Ouvrir le projet"] {
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        max-width: 90%;
+        max-height: none;
+    }
+
+    section#portfolio {
+        max-width: 90%;
+        max-height: none;
+        margin: 50px auto 0;
+        padding: 100px 50px;
+    }
+
+    section#portfolio h2 {
+        margin-bottom: 50px;
+    }
+
+    .project p {
+        margin-bottom: 30px;
+    }
+}
+
+    @media only screen and (max-width: 500px) {
+        section#portfolio {
+            padding: 20px;
+        }
+
+        section#portfolio h2 {
+            font-size: 22px;
+        }
+
+        .project img {
+            max-height: 150px;
+        }
+
+        .project h3 {
+            font-size: 18px;
+        }
+
+        .project p {
+            font-size: 14px;
+        }
+    }
+    @media only screen and (max-width: 400px) {
+        header h1 {
+            font-size: 18px;
+        }
+
+        .button-wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .posButton {
+            padding-left: 0px;
+            margin-top: 20px;
+        }
+    }
